@@ -63,25 +63,15 @@
                 background-image: url(images/bg-desktop.svg);
               }
             }
-      ul.social {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-      }
 
-      ul.social > li {
-        display: inline-block;
-      }
-
-      ul.social > li > a {
-        display: inline-block;
+      .fa {
         text-decoration: none;
         font-size: 1rem;
-        line-height: 29px;
-        width: 30px;
-        height: 30px;
-        border-radius: 36px;
+        padding: 10px 10px;
+        width: 2.5rem;
+        aspect-ratio: 1;
+        text-align: center;
+        border-radius: 50%;
         border: 1px solid var(--clr-primary-100);
         background-color: transparent;
         color: var(--clr-primary-100);
@@ -89,8 +79,7 @@
         transition: all 0.3s ease-in;
       }
 
-      ul.social > li > a:hover {
-        text-decoration: none;
+      a.fa:is(:hover, :focus-visible) {
         color: var(--clr-primary-200);
         border-color: var(--clr-primary-200);
       }
@@ -101,6 +90,9 @@
         flex-direction: column;
         gap: 2rem;
         max-width: 500px;
+      }
+      footer {
+        text-align: center;
       }
       @media(min-width: 1000px){
         main{
@@ -116,6 +108,9 @@
         }
         .part-2 {
           justify-content: center;
+        }
+        footer {
+          text-align: right;
         }
       }
 
@@ -142,6 +137,7 @@
         flex-direction: column;
         gap: 2rem;
       }
+
     </style>
   </head>
   <body>
@@ -163,12 +159,12 @@
         </p>
 
         <button>Register</button>
-        <ul class="social">
-          <li><a href="#" aria-label="Facebook" class="fa fa-facebook"></a></li>
-          <li><a href="#" aria-label="Twitter" class="fa fa-twitter"></a></li>
-          <li><a href="#" aria-label="Instagram" class="fa fa-instagram"></a></li>
-        </ul>
       </div>
     </main>
+    <footer>
+      <a href="#" aria-label="Facebook" class="fa fa-facebook"></a>
+      <a href="#" aria-label="Twitter" class="fa fa-twitter"></a>
+      <a href="#" aria-label="Instagram" class="fa fa-instagram"></a>
+    </footer>
   </body>
 </html>
