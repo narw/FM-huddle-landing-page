@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <link href="css-reset.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --clr-primary-500: hsl(257, 40%, 40%);
+        --clr-primary-400: hsl(257, 40%, 49%);
+        --clr-primary-300: hsl(300, 69%, 71%);
+        --clr-primary-200: hsl(321, 98%, 66%);
+        --clr-primary-100: white;
+
+        --fw-400: 400;
+        --fw-700: 700
+      }
+      body {
+              background-color: var(--clr-primary-400);
+              background-image: url(images/bg-mobile.svg);
+              background-size: 100% auto;
+              background-repeat: no-repeat;
+              font-family: 'Open Sans', sans-serif;
+              font-weight: var(--fw-400);
+              color: var(--clr-primary-100);
+              min-height: 100vh;
+              display: grid;
+              place-content: center;
+            }
+            h1 {
+              font-family: font-family: 'Poppins', sans-serif;
+              font-weight: var(--fw-700);
+              max-width: 20ch;
+            }
+            @media(min-width: 1000px){
+              body {
+                background-image: url(images/bg-desktop.svg);
+              }
+            }
+      ul.social {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      ul.social > li {
+        display: inline-block;
+      }
+
+      ul.social > li > a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 29px;
+        width: 30px;
+        height: 30px;
+        border-radius: 36px;
+        border: 1px solid var(--clr-primary-100);
+        background-color: transparent;
+        color: var(--clr-primary-100);
+        margin: 0 3px 3px 0;
+        transition: all 0.3s ease-in;
+      }
+
+      ul.social > li > a:hover {
+        text-decoration: none;
+        color: var(--clr-primary-200);
+        border-color: var(--clr-primary-200);
+      }
+      main {
+        padding: 3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 500px;
+      }
+      @media(min-width: 1000px){
+        main{
+          display: grid;
+          grid-template-columns: 1fr minmax(460px, auto);
+          max-width: 1200px;
+        }
+        p {
+          max-width: 460px;
+        }
+        p, h1 {
+          text-align: left;
+        }
+        .part-2 {
+          justify-content: center;
+        }
+      }
+
+      button {
+        border-radius: 100vh;
+        width: 20ch;
+        margin-inline: auto;
+        padding: 0.5em 0em;
+        border: none;
+        cursor: pointer;
+        color: var(--clr-primary-400);
+        box-shadow: 5px 5px 5px 0 var(--clr-primary-500);
+        transition: all 0.3s ease-in;
+      }
+      button:is(:hover, :focus-visible){
+        color: var(--clr-primary-100);
+        background: var(--clr-primary-200);
+      }
+      .logo {
+        max-width: 180px;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="part-1 flex-col">
+        <img alt="" src="images/logo.svg" class="logo" />
+        <img
+          alt="Illustrations of the huddle website on desktop and mobile"
+          src="images/illustration-mockups.svg"
+        />
+      </div>
+      <div class="part-2 flex-col">
+        <h1>Build The Community Your Fans Will Love</h1>
+
+        <p>
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+
+        <button>Register</button>
+        <ul class="social">
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
